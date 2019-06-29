@@ -25,7 +25,7 @@ import {APP_BASE_HREF} from '@angular/common';
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: '/'
+      useValue: './'
     }
   ],
   bootstrap: [AppComponent]
