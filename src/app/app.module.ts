@@ -7,6 +7,7 @@ import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment.prod';
 import {AppReducer} from './app.reducer';
+import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,12 @@ import {AppReducer} from './app.reducer';
       logOnly: !environment.production
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useValue: '/'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
