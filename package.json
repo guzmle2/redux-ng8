@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href='/redux-ng8/'"
+    "deploy": "ng build --prod --base-href='https://guzmle2.github.io/redux-ng8/'"
   },
   "private": false,
   "dependencies": {
