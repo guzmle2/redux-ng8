@@ -1,0 +1,17 @@
+<li [class.completed]="todo.completado"
+    [class.editing]="editing">
+  <div class="view">
+    <input class="toggle"
+           [formControl]="form.controls.completado"
+           [checked]="todo.completado"
+           type="checkbox">
+    <label (dblclick)="editando()">{{todo.texto}}</label>
+    <button class="destroy" (click)="deleteItem()"></button>
+  </div>
+  <input class="edit"
+         #txtInputFisico
+         (blur)="finishEdit()"
+         (keyup.enter)="finishEdit()"
+         [formControl]="form.controls.texto"
+         value="Rule the web">
+</li>
