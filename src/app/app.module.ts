@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {environment} from '../environments/environment.prod';
 import {AppReducer} from './app.reducer';
 import {APP_BASE_HREF} from '@angular/common';
 
@@ -19,13 +18,13 @@ import {APP_BASE_HREF} from '@angular/common';
     StoreModule.forRoot(AppReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
-      logOnly: !environment.production
+      logOnly: true
     })
   ],
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: './'
+      useValue: '/'
     }
   ],
   bootstrap: [AppComponent]
