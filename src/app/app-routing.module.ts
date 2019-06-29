@@ -10,13 +10,8 @@ const routes: Routes = [
     loadChildren: () => App01Routing
   },
   {
-    path: 'todo-app',
-    loadChildren: () => TodoAppRouting
-  },
-  {
     path: '',
-    redirectTo: 'todo-app',
-    pathMatch: 'full'
+    loadChildren: () => TodoAppRouting
   }
 ];
 
