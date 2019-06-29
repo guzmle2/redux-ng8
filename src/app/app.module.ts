@@ -6,7 +6,6 @@ import {AppComponent} from './app.component';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {AppReducer} from './app.reducer';
-import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,12 +19,6 @@ import {APP_BASE_HREF} from '@angular/common';
       maxAge: 25,
       logOnly: true
     })
-  ],
-  providers: [
-    {
-      provide: APP_BASE_HREF,
-      useValue: '/'
-    }
   ],
   bootstrap: [AppComponent]
 })
